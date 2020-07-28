@@ -9,7 +9,7 @@ def main():
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     print("Server socket created.")
 
-    IP = get('https://api.ipify.org').text
+    IP = socket.gethostbyname(socket.gethostname())
     f = open("server_address.txt", "w")
     f.write(IP)
     f.write('\n')
@@ -18,7 +18,7 @@ def main():
     f.close()
 
     #IP = "192.168.1.186"
-    #PORT = 22503
+    #PORT = 35743
 
     server_socket.bind((IP, PORT))
     server_socket.listen(40)

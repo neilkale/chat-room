@@ -10,7 +10,7 @@ def main():
     PORT = int(f.readline())
 
     #IP = "192.168.1.186"
-    #PORT = 22503
+    #PORT = 35743
 
     client_socket.connect((IP, PORT))
     client_socket.setblocking(False)
